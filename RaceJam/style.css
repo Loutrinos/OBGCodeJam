@@ -1,33 +1,110 @@
-.wrapper {
-    margin: 50px auto 0;
-    width: 50vw;
-    text-align: center;
+*, *:before, *:after { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; }
+
+body {
+    font-family: 'Gugi', cursive;
+    padding: 0;
+    margin: 0;
+    background-color: #45a3c9;
+    background-image: url(main-image.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    overflow-x:hidden;
 }
 
-h1 {
-    text-align: left;
+.wrapper {
+    padding: 20vh 5vw 20vh 55vw;
+    width: 100vw;
+    color: white;
 }
 
 .form {
-    border: 1px solid black;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .input {
-    margin: 10px 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 0 #26596d;
+    border: 2px solid #3f92b3;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 1.3em;
+    background: transparent;
+    padding: 10px;
+}
+
+.input.members {
+    margin-bottom: 5px;
+}
+
+.input.members input {
+    width: calc(100% - 50px);
+}
+
+.add-members {
+    height: 30px;
+    width: 30px;
+    background: #45A3C9;
+    border: 0;
+    color: white;
+    cursor:pointer;
 }
 
 .submit {
-    background-color:green;
+    background-color:#f36453;
     color: white;
-    border-radius: 2px;
     border: 0;
     font-size: 20px;
     padding: 5px 20px;
     cursor: pointer;
+    width: 100%;
     box-shadow: 1px 1px 0 1px black;
+    margin-top: 20px;
 }
 .submit:hover {
-    background-color: greenyellow;
-    color:black;
+    background-color: #db5a4c;
+}
+
+.submit[disabled] {
+    background-color: grey;
+}
+
+.message {
+    font-size: 25px;
+    color: limegreen;
+    text-shadow: 2px 2px rgba(0,0,0,.5);
+    text-align: center;
+    margin: 10px 0;
+    display: none;
+    width: 100%;
+}
+.error {
+    font-size: 25px;
+    color: #db5a4c;
+    text-shadow: 2px 2px rgba(255,255,255,.2);
+    text-align: center;
+    margin: 10px 0;
+    display: none;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: none;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .wrapper {
+        padding-left: 5vw;
+        padding-top: 5vh;
+    }
 }
